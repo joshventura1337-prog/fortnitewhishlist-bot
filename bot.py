@@ -12,7 +12,8 @@ last_notifications = {}  # {user_id: {'item': datetime}}
 # --- Функция получения магазина через API ---
 def get_fortnite_shop():
     try:
-        response = requests.get("https://fortnite-api.com/v2/shop/br", timeout=10)
+        # Новый URL API Fortnite (замените на актуальный)
+        response = requests.get("https://api.nitestats.com/v1/shop/br", timeout=10)
         response.raise_for_status()
         data = response.json()
         if data.get("status") == 200:
